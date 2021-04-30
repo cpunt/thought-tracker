@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { firebase, googleProvider } from '../firebase';
+import { UserContext } from '../providers/UserProvider';
 
-class LoginGoogle extends Component <{}, { user: any }> {
+class LoginGoogle extends Component {
+  static contextType = UserContext
+
    constructor(props: any) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
-    this.state = { user: null };
-  }
-
-  componentWillMount() {
-    this.setUser();
   }
 
   render () {
+    const user = this.context.user;
+
     return (
       <div>
         {
-          this.state.user
+          user.loggedIn
           ? <LogoutButton onClick={this.handleLogout} />
           : <LoginButton onClick={this.handleLogin} />
         }
@@ -25,6 +25,7 @@ class LoginGoogle extends Component <{}, { user: any }> {
     );
   }
 
+  // Methods
   async handleLogin () {
     try {
       // Login successful
@@ -43,12 +44,6 @@ class LoginGoogle extends Component <{}, { user: any }> {
     } catch (err) {
       console.log(err);
     }
-  }
-
-  setUser () {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ user: user });
-    });
   }
 }
 
