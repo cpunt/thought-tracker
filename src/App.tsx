@@ -4,6 +4,11 @@ import UserProvider from './providers/UserProvider';
 import Application from './components/Application';
 
 class App extends Component {
+  // Properties
+
+  // Lifecycle methods
+
+  // HTML
   render () {
     return (
       <UserProvider>

@@ -3,14 +3,17 @@ import { firebase, googleProvider } from '../firebase';
 import { UserContext } from '../providers/UserProvider';
 
 class LoginGoogle extends Component {
+  // Properties
   static contextType = UserContext
 
-   constructor(props: any) {
+  // Lifecycle methods
+  constructor(props: any) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
 
+  // HTML
   render () {
     const user = this.context.user;
 
