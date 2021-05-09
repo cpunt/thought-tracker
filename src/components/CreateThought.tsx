@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { db } from '../firebase';
 import { UserContext } from '../providers/UserProvider';
-import '../css/thoughtForm.css';
+import '../css/create.css';
+import '../css/main.css';
 
-class ThoughtForm extends Component <{}, { value: string }> {
+class CreateThought extends Component <{}, { value: string }> {
   // Properties
   static contextType = UserContext
 
@@ -22,13 +23,16 @@ class ThoughtForm extends Component <{}, { value: string }> {
    // HTML
    render() {
      return (
-       <form className='thoughtForm'>
-         <textarea className='thoughtTextarea' value={this.state.value} onChange={this.handleChange} placeholder='Enter Thought' />
-         <div>
-          <button className='thoughtBtn' onClick={this.handleClear}>Clear</button>
-          <button className='thoughtBtn' type='button' onClick={this.handleCreate}>Create</button>
-        </div>
-       </form>
+       <div className='default-div'>
+        <h1 className='header'>Create Thought</h1>
+         <form>
+           <textarea className='thought-text-area' value={this.state.value} onChange={this.handleChange} placeholder='Enter Thought' />
+           <div>
+            <button className='thought-btn' onClick={this.handleClear}>Clear</button>
+            <button className='thought-btn' type='button' onClick={this.handleCreate}>Create</button>
+          </div>
+         </form>
+      </div>
      );
    }
 
@@ -58,4 +62,4 @@ class ThoughtForm extends Component <{}, { value: string }> {
    }
 }
 
-export default ThoughtForm;
+export default CreateThought;

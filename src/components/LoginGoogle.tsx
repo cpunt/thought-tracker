@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { firebase, googleProvider } from '../firebase';
 import { UserContext } from '../providers/UserProvider';
+import '../css/login.css';
 
 class LoginGoogle extends Component {
   // Properties
@@ -52,7 +53,7 @@ class LoginGoogle extends Component {
 
 function LoginButton (props: any) {
   return (
-    <button onClick={props.onClick}>
+    <button className='login-btn login-btn--google' onClick={props.onClick}>
       Login Google+
     </button>
   );
@@ -60,7 +61,7 @@ function LoginButton (props: any) {
 
 function LogoutButton (props: any) {
   return (
-    <button onClick={props.onClick}>
+    <button className='login-btn login-btn--google' onClick={props.onClick}>
       Logout Google+
     </button>
   );

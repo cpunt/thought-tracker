@@ -1,0 +1,50 @@
+/*
+Backgounrd: #fff
+Highlight: #f4f5f7
+Text-light: #808690
+Text-dark: #3a414f
+*/
+
+.sidebar-outer-div {
+  width: 180px;
+}
+
+.sidebar-inner-div {
+  width: 180px;
+  overflow: scroll;
+  position: fixed;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+  box-shadow: 8px 0 5px -2px #888;
+}
+
+.user-div {
+  border-bottom: 1px #808690 solid;
+  padding: 5px;
+  text-align: center;
+}
+
+.link-header {
+  margin: 10px 5px;
+  font-weight: bold;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 10px 5px;
+}
+
+.link-header:hover {
+  background-color: #f4f5f7;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #808690
+}
+
+.link:hover {
+  background-color: #f4f5f7;
+  color: #3a414f;
+}

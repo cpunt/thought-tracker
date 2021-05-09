@@ -1,0 +1,21 @@
+html {
+  background-color: #d2d6dc;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.default-div {
+  background-color: #ffffff;
+  margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: #888 0px 5px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 0.5em;
+  width: 60%;
+}

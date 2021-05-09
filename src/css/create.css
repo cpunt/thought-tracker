@@ -1,0 +1,39 @@
+.thought-text-area {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 90%;
+  min-height: 200px;
+  font-size: 20px;
+  border-radius: 0.5em;
+  resize: vertical;
+  color: #3a414f;
+}
+
+.thought-text-area:focus {
+  outline: none !important;
+  border: 1px solid #3a414f;
+  box-shadow: 0 0 4px #3a414f;
+}
+
+.thought-btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #000000;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
+  color: #000000;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.thought-btn:hover {
+  border-radius: 1em;
+}
+
+.header {
+  color: #3a414f;
+  margin: 5px;
+}
